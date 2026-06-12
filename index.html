@@ -158,7 +158,7 @@
   .section-head p{font-size:1.08rem;margin-bottom:0;}
   /* keep these heads on a single line on desktop; wrap gracefully on small screens */
   .section-head.oneline{max-width:none;}
-  .section-head.oneline p{max-width:620px;margin-left:auto;margin-right:auto;}
+  .section-head.oneline p{max-width:740px;margin-left:auto;margin-right:auto;}
   @media (min-width:992px){.section-head.oneline h2{white-space:nowrap;}}
 
   /* ---------- Test cards ---------- */
@@ -197,7 +197,7 @@
   }
 
   /* ---------- Included ---------- */
-  .included .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
+  .included .wrap{display:grid;grid-template-columns:1fr;gap:30px;max-width:820px;}
   .check-list{list-style:none;margin:0;padding:0;display:grid;gap:16px;}
   .check-list li{display:flex;gap:14px;align-items:flex-start;font-size:1.04rem;color:var(--ink);}
   .check-list .ck{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin-top:2px;}
@@ -279,6 +279,45 @@
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
   }
+
+  /* ---- added: five tests, self-pay, sample collection ---- */
+  .test-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;}
+  .test-icon.t4{background:#FBF0E7;}
+  .test-icon.t5{background:#E8F2FA;}
+  .selfpay{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);}
+  .selfpay h4{font-family:"Nunito",sans-serif;font-size:.96rem;font-weight:800;color:var(--ink);margin:0 0 11px;}
+  .selfpay-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  .selfpay-grid div{display:flex;align-items:baseline;justify-content:space-between;gap:8px;background:var(--mist);border:1px solid var(--line);border-radius:10px;padding:8px 12px;}
+  .selfpay-grid span{font-size:.85rem;color:var(--slate);}
+  .selfpay-grid b{font-family:"Nunito",sans-serif;font-weight:900;color:var(--green-deep);font-size:1.04rem;}
+  .selfpay-note{font-size:.84rem;color:var(--slate);margin:11px 0 0;line-height:1.5;}
+  .collect{background:var(--white);}
+  .collect-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;}
+  .collect-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:26px 24px;}
+  .collect-card .ctag{display:inline-block;font-family:"Inter",sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:7px;}
+  .collect-card h3{font-size:1.2rem;font-weight:800;margin:0 0 8px;}
+  .collect-card .note{font-size:.84rem;color:var(--slate);background:var(--mist);border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-bottom:14px;line-height:1.45;}
+  .collect-card ol{margin:0;padding-left:1.15rem;}
+  .collect-card ol li{font-size:.92rem;color:var(--ink);margin-bottom:11px;line-height:1.5;}
+  .collect-note{font-size:.92rem;color:var(--slate);margin:30px auto 0;text-align:center;max-width:680px;}
+  .collect-note strong{color:var(--ink);}
+
+  /* ---- added: collapsible dropdowns (sample collection + cash pay) ---- */
+  .info-drop{max-width:820px;margin:0 auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-sm);overflow:hidden;}
+  .info-drop.wide{max-width:1040px;}
+  .info-summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;font-family:"Nunito",sans-serif;font-weight:800;font-size:1.18rem;color:var(--ink);}
+  .info-summary::-webkit-details-marker{display:none;}
+  .info-summary:hover{background:var(--mist);}
+  .drop-chev{flex:0 0 auto;color:var(--teal);transition:transform .25s ease;}
+  .info-drop[open] .drop-chev{transform:rotate(90deg);}
+  .info-drop-body{padding:6px 26px 28px;border-top:1px solid var(--line);}
+  .collect-intro{font-size:1rem;color:var(--slate);margin:16px 0 22px;}
+  .cost-drop .info-drop-body p:first-of-type{margin-top:14px;}
+
+  /* ---- added: size test cards 3-up and center the final 2-card row ---- */
+  .test-card{flex:0 1 calc((100% - 48px) / 3);}
+  @media (max-width:880px){ .test-card{flex-basis:calc((100% - 24px) / 2);} }
+  @media (max-width:540px){ .test-card{flex-basis:100%;} }
 </style>
 </head>
 <body>
@@ -336,7 +375,7 @@
   <div class="wrap">
     <div class="section-head center oneline">
       <p class="eyebrow">What can be tested</p>
-      <h2>Three types of testing, one simple sample</h2>
+      <h2>Five types of testing, one simple sample</h2>
       <p>Depending on your personal and family health history, your provider may recommend one or more of these panels. All use the same easy in-office collection.</p>
     </div>
     <div class="test-grid">
@@ -348,7 +387,6 @@
         <p class="kicker">PrevenTest®</p>
         <h3>Hereditary cancer risk</h3>
         <p>Looks for inherited gene changes linked to eight major cancers — including breast, ovarian, and colorectal — so risk can be caught early.</p>
-        <a class="test-foot" href="#cancer">Learn more →</a>
       </article>
 
       <article class="test-card">
@@ -358,7 +396,6 @@
         <p class="kicker">NewbornGeneID®</p>
         <h3>Carrier screening</h3>
         <p>A screening test that shows whether you carry a genetic variant — for 68+ inherited conditions — that could be passed to a child.</p>
-        <a class="test-foot" href="#carrier">Learn more →</a>
       </article>
 
       <article class="test-card">
@@ -368,7 +405,24 @@
         <p class="kicker">Pharmacogenomics</p>
         <h3>Medication response</h3>
         <p>Shows how your genes affect the way your body processes medications, helping your provider choose drugs and doses that fit you.</p>
-        <a class="test-foot" href="#pgx">Learn more →</a>
+      </article>
+
+      <article class="test-card">
+        <div class="test-icon t4" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3" stroke="#C9892F" stroke-width="1.8"/><path d="M8.6 13a3.4 3.4 0 0 1 6.8 0" stroke="#C9892F" stroke-width="1.8" stroke-linecap="round"/><path d="M6.5 21c0-3 2.5-5.4 5.5-5.4S17.5 18 17.5 21" stroke="#C9892F" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </div>
+        <p class="kicker">Envisage® (NIPT)</p>
+        <h3>Noninvasive prenatal testing</h3>
+        <p>A simple blood test that screens for certain chromosomal conditions and can determine fetal sex as early as 10 weeks of pregnancy.</p>
+      </article>
+
+      <article class="test-card">
+        <div class="test-icon t5" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#2E78B6" stroke-width="1.8"/><path d="m20 20-3.6-3.6" stroke="#2E78B6" stroke-width="1.8" stroke-linecap="round"/><path d="M9.3 8.5c0 2.4 3.5 1.7 3.5 4.1M12.8 8.5c0 2.4-3.5 1.7-3.5 4.1" stroke="#2E78B6" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <p class="kicker">Xenome</p>
+        <h3>Whole exome sequencing (WES)</h3>
+        <p>Examines the genes most often linked to medical conditions to uncover genetic factors behind autism, epilepsy, and developmental conditions — aiding diagnosis and treatment planning.</p>
       </article>
 
     </div>
@@ -407,6 +461,67 @@
   </div>
 </section>
 
+<!-- ============ SAMPLE COLLECTION ============ -->
+<section class="collect">
+  <div class="wrap">
+    <div class="section-head center">
+      <p class="eyebrow">Already have a kit?</p>
+    </div>
+    <details class="info-drop wide">
+      <summary class="info-summary">
+        <span>How to collect your sample</span>
+        <svg class="drop-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="info-drop-body">
+        <p class="collect-intro">Collection is quick, painless, and done at home — no blood draw and no needles. Use the method that matches the kit your provider gave you.</p>
+        <div class="collect-grid">
+      <article class="collect-card">
+        <span class="ctag">Method 1</span>
+        <h3>Buccal (cheek) swab</h3>
+        <ol>
+          <li><strong>Wash your hands</strong> and make sure they're completely dry.</li>
+          <li><strong>Prepare the swab.</strong> Open the package; don't touch the swab tip or green plunger, and don't discard the package.</li>
+          <li><strong>Collect.</strong> Rub the swab firmly inside both cheeks with a back-and-forth motion — 30 seconds per side (1 minute total). Repeat for each tube if you have more than one.</li>
+          <li><strong>Insert the swab.</strong> Reinsert it headfirst into the original package so the head is secured in the non-peeled part.</li>
+          <li><strong>Seal.</strong> Open the GenDry pouch at the tear-notch, place the swab inside with the desiccant (don't remove it), and seal.</li>
+          <li><strong>Bag &amp; box.</strong> Put all tubes in the biohazard bag, seal it, and place it in the collection box.</li>
+          <li><strong>Ship.</strong> Put the box in the UPS return bag (prepaid label already applied) and drop it at any UPS location or hand it to your driver.</li>
+        </ol>
+      </article>
+      <article class="collect-card">
+        <span class="ctag">Method 2</span>
+        <h3>Mouth rinse</h3>
+        <div class="note">Tubes per kit — Cancer Risk + PGx: 2 tubes (20 mL each) · Carrier status: 1 tube (10 mL).</div>
+        <ol>
+          <li><strong>Measure.</strong> Pour 20 mL of the provided Scope® mouthwash into the cup (repeat if more than two tubes are needed).</li>
+          <li><strong>Swish</strong> thoroughly for 30 seconds.</li>
+          <li><strong>Spit</strong> back into the cup.</li>
+          <li><strong>Fill the tubes.</strong> Pour the rinse into the pre-labeled tubes — at least 10 mL each.</li>
+          <li><strong>Bag &amp; box.</strong> Seal all tubes in the biohazard bag and place it in the collection box.</li>
+          <li><strong>Ship.</strong> Put the box in the UPS return bag (prepaid label applied) and drop at UPS or hand it to your driver.</li>
+        </ol>
+      </article>
+      <article class="collect-card">
+        <span class="ctag">Method 3</span>
+        <h3>Oragene® saliva</h3>
+        <div class="note">Don't eat, drink, smoke, or chew gum for 30 minutes before collecting.</div>
+        <ol>
+          <li><strong>Prepare.</strong> Remove the funnel-top tube; keep the cap with liquid preservative attached to the funnel.</li>
+          <li><strong>Fill with saliva (no bubbles).</strong> Spit into the funnel until saliva — not foam — reaches the fill line. This can take a few minutes.</li>
+          <li><strong>Close the lid</strong> firmly until it clicks, releasing the stabilizing solution.</li>
+          <li><strong>Remove the funnel</strong> and discard it.</li>
+          <li><strong>Cap the tube.</strong> Screw on the small blue cap tightly and gently invert 5 times to mix.</li>
+          <li><strong>Bag &amp; box.</strong> Seal all tubes in the biohazard bag and place it in the collection box.</li>
+          <li><strong>Ship.</strong> Put the box in the UPS return bag (prepaid label applied) and drop at UPS or hand it to your driver.</li>
+        </ol>
+      </article>
+    </div>
+        <p class="collect-note">Questions about collecting your sample? Call or text the GeneID Patient Support team at <strong>(973) 284-7560</strong> or email <strong>patient.support@geneidlab.com</strong>.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
 <!-- ============ INCLUDED + COST ============ -->
 <section class="included">
   <div class="wrap">
@@ -421,9 +536,13 @@
       </ul>
     </div>
 
-    <!-- NON-PROMISSORY cost panel — do not add "free" / "$0" / cash prices -->
-    <div class="included-panel">
-      <h3>How cost works</h3>
+    <!-- Cost panel — now a "Cash Pay Options" dropdown, placed under "Care, support, and no surprises". Self-pay pricing matches the GeneID bifold brochure. -->
+    <details class="info-drop cost-drop">
+      <summary class="info-summary">
+        <span>Cash Pay Options</span>
+        <svg class="drop-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="info-drop-body">
       <p>We keep billing transparent so you can decide with no pressure.</p>
       <div class="cost-line">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1C8B97" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="#1C8B97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -437,8 +556,19 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1C8B97" stroke-width="1.8"/><path d="M9 12h6" stroke="#1C8B97" stroke-width="1.8" stroke-linecap="round"/></svg>
         <span>You can <strong>decline at any time</strong>, at no charge.</span>
       </div>
+      <div class="selfpay">
+        <h4>Self-pay pricing — if not covered</h4>
+        <div class="selfpay-grid">
+          <div><span>PrevenTest®</span><b>$999</b></div>
+          <div><span>Carrier</span><b>$249</b></div>
+          <div><span>PGx</span><b>$300</b></div>
+          <div><span>NIPT</span><b>$300</b></div>
+        </div>
+        <p class="selfpay-note">If testing isn't covered, affordable self-pay and interest-free payment plans are available — and you can decline at any time.</p>
+      </div>
       <p style="font-size:.84rem;color:var(--slate);margin:14px 0 0;">If you receive an Explanation of Benefits (EOB) from your insurer, that document is not a bill.</p>
-    </div>
+      </div>
+    </details>
   </div>
 </section>
 
