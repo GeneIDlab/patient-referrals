@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Genetic Testing with GeneID Lab</title>
-<meta name="description" content="GeneID Lab brings voluntary genetic testing into your provider's office. Learn about hereditary cancer risk, carrier screening, and pharmacogenomic testing." />
+<title>Pruebas Genéticas con GeneID Lab</title>
+<meta name="description" content="GeneID Lab ofrece pruebas genéticas voluntarias en el consultorio de tu proveedor. Conoce sobre el riesgo hereditario de cáncer, la prueba de portador y la prueba farmacogenómica." />
 
 <!--
   =====================================================================
@@ -158,7 +158,7 @@
   .section-head p{font-size:1.08rem;margin-bottom:0;}
   /* keep these heads on a single line on desktop; wrap gracefully on small screens */
   .section-head.oneline{max-width:none;}
-  .section-head.oneline p{max-width:740px;margin-left:auto;margin-right:auto;}
+  .section-head.oneline p{max-width:620px;margin-left:auto;margin-right:auto;}
   @media (min-width:992px){.section-head.oneline h2{white-space:nowrap;}}
 
   /* ---------- Test cards ---------- */
@@ -197,7 +197,7 @@
   }
 
   /* ---------- Included ---------- */
-  .included .wrap{display:grid;grid-template-columns:1fr;gap:30px;max-width:820px;}
+  .included .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;}
   .check-list{list-style:none;margin:0;padding:0;display:grid;gap:16px;}
   .check-list li{display:flex;gap:14px;align-items:flex-start;font-size:1.04rem;color:var(--ink);}
   .check-list .ck{flex:0 0 auto;width:26px;height:26px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin-top:2px;}
@@ -279,45 +279,6 @@
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important;}
   }
-
-  /* ---- added: five tests, self-pay, sample collection ---- */
-  .test-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;}
-  .test-icon.t4{background:#FBF0E7;}
-  .test-icon.t5{background:#E8F2FA;}
-  .selfpay{margin-top:18px;padding-top:16px;border-top:1px solid var(--line);}
-  .selfpay h4{font-family:"Nunito",sans-serif;font-size:.96rem;font-weight:800;color:var(--ink);margin:0 0 11px;}
-  .selfpay-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
-  .selfpay-grid div{display:flex;align-items:baseline;justify-content:space-between;gap:8px;background:var(--mist);border:1px solid var(--line);border-radius:10px;padding:8px 12px;}
-  .selfpay-grid span{font-size:.85rem;color:var(--slate);}
-  .selfpay-grid b{font-family:"Nunito",sans-serif;font-weight:900;color:var(--green-deep);font-size:1.04rem;}
-  .selfpay-note{font-size:.84rem;color:var(--slate);margin:11px 0 0;line-height:1.5;}
-  .collect{background:var(--white);}
-  .collect-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:24px;}
-  .collect-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:26px 24px;}
-  .collect-card .ctag{display:inline-block;font-family:"Inter",sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:7px;}
-  .collect-card h3{font-size:1.2rem;font-weight:800;margin:0 0 8px;}
-  .collect-card .note{font-size:.84rem;color:var(--slate);background:var(--mist);border:1px solid var(--line);border-radius:10px;padding:9px 12px;margin-bottom:14px;line-height:1.45;}
-  .collect-card ol{margin:0;padding-left:1.15rem;}
-  .collect-card ol li{font-size:.92rem;color:var(--ink);margin-bottom:11px;line-height:1.5;}
-  .collect-note{font-size:.92rem;color:var(--slate);margin:30px auto 0;text-align:center;max-width:680px;}
-  .collect-note strong{color:var(--ink);}
-
-  /* ---- added: collapsible dropdowns (sample collection + cash pay) ---- */
-  .info-drop{max-width:820px;margin:0 auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--white);box-shadow:var(--shadow-sm);overflow:hidden;}
-  .info-drop.wide{max-width:1040px;}
-  .info-summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:22px 26px;font-family:"Nunito",sans-serif;font-weight:800;font-size:1.18rem;color:var(--ink);}
-  .info-summary::-webkit-details-marker{display:none;}
-  .info-summary:hover{background:var(--mist);}
-  .drop-chev{flex:0 0 auto;color:var(--teal);transition:transform .25s ease;}
-  .info-drop[open] .drop-chev{transform:rotate(90deg);}
-  .info-drop-body{padding:6px 26px 28px;border-top:1px solid var(--line);}
-  .collect-intro{font-size:1rem;color:var(--slate);margin:16px 0 22px;}
-  .cost-drop .info-drop-body p:first-of-type{margin-top:14px;}
-
-  /* ---- added: size test cards 3-up and center the final 2-card row ---- */
-  .test-card{flex:0 1 calc((100% - 48px) / 3);}
-  @media (max-width:880px){ .test-card{flex-basis:calc((100% - 24px) / 2);} }
-  @media (max-width:540px){ .test-card{flex-basis:100%;} }
 </style>
 </head>
 <body>
@@ -331,8 +292,8 @@
       </a>
     </div>
     <div class="nav-right">
-      <a class="lang-link" href="es.html">Español</a>
-      <a class="btn btn-primary nav-cta" href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Check my eligibility</a>
+      <a class="lang-link" href="index.html">English</a>
+      <a class="btn btn-primary nav-cta" href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Verificar si califico</a>
     </div>
   </div>
 </header>
@@ -342,16 +303,16 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <p class="eyebrow">Personalized genetics for preventive care</p>
-      <h1>Your genes can help guide <span class="accent">safer, more personal care.</span></h1>
-      <p class="lede">Your provider has partnered with GeneID Lab to offer voluntary genetic testing right in the office — a simple cheek swab or saliva sample, no blood draw.</p>
+      <p class="eyebrow">Genética personalizada para la medicina preventiva</p>
+      <h1>Tus genes pueden guiar <span class="accent">una atención más segura y personalizada.</span></h1>
+      <p class="lede">Tu proveedor se ha asociado con GeneID Lab para ofrecer pruebas genéticas voluntarias en el mismo consultorio: una simple muestra con hisopo bucal o de saliva, sin extracción de sangre.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Check my eligibility</a>
-        <a class="btn btn-ghost" href="tel:+19732847560">Call (973) 284-7560</a>
+        <a class="btn btn-primary" href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Verificar si califico</a>
+        <a class="btn btn-ghost" href="tel:+19732847560">Llamar al (973) 284-7560</a>
       </div>
       <p class="hero-note">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.6 8 11 4.6-2.4 8-6 8-11V5l-8-3Z" stroke="#1C8B97" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3L16 9" stroke="#1C8B97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        Testing is completely voluntary, and you can decline at any time.
+        Las pruebas son completamente voluntarias y puedes rechazarlas en cualquier momento.
       </p>
     </div>
 
@@ -359,11 +320,11 @@
       <div class="helix-card">
         <img class="hero-photo"
              src="https://files.constantcontact.com/95c0130f901/13a5d9a9-703f-48ae-bd53-e7a63951a682.jpg"
-             alt="A patient meeting with their healthcare provider about genetic testing" />
+             alt="Un paciente conversando con su proveedor de salud sobre pruebas genéticas" />
         <div class="card-scrim" aria-hidden="true"></div>
         <div class="tag">
-          <b>CLIA-certified · CAP-accredited</b>
-          <span>Clinical-grade genetic testing from GeneID Lab</span>
+          <b>Con certificación CLIA · Acreditación CAP</b>
+          <span>Pruebas genéticas de grado clínico de GeneID Lab</span>
         </div>
       </div>
     </div>
@@ -374,9 +335,9 @@
 <section class="tests" id="tests">
   <div class="wrap">
     <div class="section-head center oneline">
-      <p class="eyebrow">What can be tested</p>
-      <h2>Five types of testing, one simple sample</h2>
-      <p>Depending on your personal and family health history, your provider may recommend one or more of these panels. All use the same easy in-office collection.</p>
+      <p class="eyebrow">Qué se puede analizar</p>
+      <h2>Tres pruebas, una muestra sencilla</h2>
+      <p>Según tu historial de salud personal y familiar, tu proveedor puede recomendar uno o más de estos paneles. Todos usan la misma toma de muestra sencilla en el consultorio.</p>
     </div>
     <div class="test-grid">
 
@@ -385,8 +346,9 @@
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10Z" stroke="#C9892F" stroke-width="1.8" stroke-linejoin="round"/></svg>
         </div>
         <p class="kicker">PrevenTest®</p>
-        <h3>Hereditary cancer risk</h3>
-        <p>Looks for inherited gene changes linked to eight major cancers — including breast, ovarian, and colorectal — so risk can be caught early.</p>
+        <h3>Riesgo hereditario de cáncer</h3>
+        <p>Busca cambios genéticos hereditarios relacionados con ocho tipos principales de cáncer —como el de mama, ovario y colorrectal— para detectar el riesgo a tiempo.</p>
+        <a class="test-foot" href="#cancer">Más información →</a>
       </article>
 
       <article class="test-card">
@@ -394,35 +356,19 @@
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M7 3c5 4 5 6 0 9s-5 5 0 9M17 3c-5 4-5 6 0 9s5 5 0 9" stroke="#2E78B6" stroke-width="1.8" stroke-linecap="round"/></svg>
         </div>
         <p class="kicker">NewbornGeneID®</p>
-        <h3>Carrier screening</h3>
-        <p>A screening test that shows whether you carry a genetic variant — for 68+ inherited conditions — that could be passed to a child.</p>
+        <h3>Prueba de portador</h3>
+        <p>Una prueba que indica si eres portador de una variante genética —de más de 68 condiciones hereditarias— que podría transmitirse a un hijo.</p>
+        <a class="test-foot" href="#carrier">Más información →</a>
       </article>
 
       <article class="test-card">
         <div class="test-icon t3" aria-hidden="true">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M9 3h6v4l-4 6v5a2 2 0 0 0 4 0v-5l-4-6" stroke="#2E9E6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 3v4l4 6" stroke="#2E9E6B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
-        <p class="kicker">Pharmacogenomics</p>
-        <h3>Medication response</h3>
-        <p>Shows how your genes affect the way your body processes medications, helping your provider choose drugs and doses that fit you.</p>
-      </article>
-
-      <article class="test-card">
-        <div class="test-icon t4" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3" stroke="#C9892F" stroke-width="1.8"/><path d="M8.6 13a3.4 3.4 0 0 1 6.8 0" stroke="#C9892F" stroke-width="1.8" stroke-linecap="round"/><path d="M6.5 21c0-3 2.5-5.4 5.5-5.4S17.5 18 17.5 21" stroke="#C9892F" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </div>
-        <p class="kicker">Envisage® (NIPT)</p>
-        <h3>Noninvasive prenatal testing</h3>
-        <p>A simple blood test that screens for certain chromosomal conditions and can determine fetal sex as early as 10 weeks of pregnancy.</p>
-      </article>
-
-      <article class="test-card">
-        <div class="test-icon t5" aria-hidden="true">
-          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="6.5" stroke="#2E78B6" stroke-width="1.8"/><path d="m20 20-3.6-3.6" stroke="#2E78B6" stroke-width="1.8" stroke-linecap="round"/><path d="M9.3 8.5c0 2.4 3.5 1.7 3.5 4.1M12.8 8.5c0 2.4-3.5 1.7-3.5 4.1" stroke="#2E78B6" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <p class="kicker">Xenome</p>
-        <h3>Whole exome sequencing (WES)</h3>
-        <p>Examines the genes most often linked to medical conditions to uncover genetic factors behind autism, epilepsy, and developmental conditions — aiding diagnosis and treatment planning.</p>
+        <p class="kicker">Farmacogenómica (PGx)</p>
+        <h3>Respuesta a los medicamentos</h3>
+        <p>Muestra cómo tus genes influyen en la forma en que tu cuerpo procesa los medicamentos, ayudando a tu proveedor a elegir los fármacos y las dosis más adecuados para ti.</p>
+        <a class="test-foot" href="#pgx">Más información →</a>
       </article>
 
     </div>
@@ -433,92 +379,31 @@
 <section class="how">
   <div class="wrap">
     <div class="section-head center oneline">
-      <p class="eyebrow">How it works</p>
-      <h2>From eligibility to results, step by step</h2>
+      <p class="eyebrow">Cómo funciona</p>
+      <h2>Del inicio a los resultados, paso a paso</h2>
     </div>
     <div class="steps">
       <div class="step">
         <div class="num">1</div>
-        <h3>Check eligibility</h3>
-        <p>A quick, confidential review of your personal and family health history confirms whether testing is right for you.</p>
+        <h3>Verifica si calificas</h3>
+        <p>Una revisión rápida y confidencial de tu historial de salud personal y familiar confirma si la prueba es adecuada para ti.</p>
       </div>
       <div class="step">
         <div class="num">2</div>
-        <h3>Give a sample</h3>
-        <p>A non-invasive cheek swab or saliva rinse, collected right in your provider's office. No blood draw needed.</p>
+        <h3>Da una muestra</h3>
+        <p>Una muestra no invasiva con hisopo bucal o enjuague de saliva, tomada en el consultorio de tu proveedor. No se necesita extracción de sangre.</p>
       </div>
       <div class="step">
         <div class="num">3</div>
-        <h3>Lab analysis</h3>
-        <p>GeneID's CLIA-certified, CAP-accredited lab analyzes your DNA against established clinical guidelines.</p>
+        <h3>Análisis de laboratorio</h3>
+        <p>El laboratorio de GeneID, con certificación CLIA y acreditación CAP, analiza tu ADN según pautas clínicas establecidas.</p>
       </div>
       <div class="step">
         <div class="num">4</div>
-        <h3>Review with your provider</h3>
-        <p>Your provider walks you through your results and what they mean for your care and your family.</p>
+        <h3>Repasa los resultados con tu proveedor</h3>
+        <p>Tu proveedor te explica tus resultados y lo que significan para tu cuidado y tu familia.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- ============ SAMPLE COLLECTION ============ -->
-<section class="collect">
-  <div class="wrap">
-    <div class="section-head center">
-      <p class="eyebrow">Already have a kit?</p>
-    </div>
-    <details class="info-drop wide">
-      <summary class="info-summary">
-        <span>How to collect your sample</span>
-        <svg class="drop-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </summary>
-      <div class="info-drop-body">
-        <p class="collect-intro">Collection is quick, painless, and done at home — no blood draw and no needles. Use the method that matches the kit your provider gave you.</p>
-        <div class="collect-grid">
-      <article class="collect-card">
-        <span class="ctag">Method 1</span>
-        <h3>Buccal (cheek) swab</h3>
-        <ol>
-          <li><strong>Wash your hands</strong> and make sure they're completely dry.</li>
-          <li><strong>Prepare the swab.</strong> Open the package; don't touch the swab tip or green plunger, and don't discard the package.</li>
-          <li><strong>Collect.</strong> Rub the swab firmly inside both cheeks with a back-and-forth motion — 30 seconds per side (1 minute total). Repeat for each tube if you have more than one.</li>
-          <li><strong>Insert the swab.</strong> Reinsert it headfirst into the original package so the head is secured in the non-peeled part.</li>
-          <li><strong>Seal.</strong> Open the GenDry pouch at the tear-notch, place the swab inside with the desiccant (don't remove it), and seal.</li>
-          <li><strong>Bag &amp; box.</strong> Put all tubes in the biohazard bag, seal it, and place it in the collection box.</li>
-          <li><strong>Ship.</strong> Put the box in the UPS return bag (prepaid label already applied) and drop it at any UPS location or hand it to your driver.</li>
-        </ol>
-      </article>
-      <article class="collect-card">
-        <span class="ctag">Method 2</span>
-        <h3>Mouth rinse</h3>
-        <div class="note">Tubes per kit — Cancer Risk + PGx: 2 tubes (20 mL each) · Carrier status: 1 tube (10 mL).</div>
-        <ol>
-          <li><strong>Measure.</strong> Pour 20 mL of the provided Scope® mouthwash into the cup (repeat if more than two tubes are needed).</li>
-          <li><strong>Swish</strong> thoroughly for 30 seconds.</li>
-          <li><strong>Spit</strong> back into the cup.</li>
-          <li><strong>Fill the tubes.</strong> Pour the rinse into the pre-labeled tubes — at least 10 mL each.</li>
-          <li><strong>Bag &amp; box.</strong> Seal all tubes in the biohazard bag and place it in the collection box.</li>
-          <li><strong>Ship.</strong> Put the box in the UPS return bag (prepaid label applied) and drop at UPS or hand it to your driver.</li>
-        </ol>
-      </article>
-      <article class="collect-card">
-        <span class="ctag">Method 3</span>
-        <h3>Oragene® saliva</h3>
-        <div class="note">Don't eat, drink, smoke, or chew gum for 30 minutes before collecting.</div>
-        <ol>
-          <li><strong>Prepare.</strong> Remove the funnel-top tube; keep the cap with liquid preservative attached to the funnel.</li>
-          <li><strong>Fill with saliva (no bubbles).</strong> Spit into the funnel until saliva — not foam — reaches the fill line. This can take a few minutes.</li>
-          <li><strong>Close the lid</strong> firmly until it clicks, releasing the stabilizing solution.</li>
-          <li><strong>Remove the funnel</strong> and discard it.</li>
-          <li><strong>Cap the tube.</strong> Screw on the small blue cap tightly and gently invert 5 times to mix.</li>
-          <li><strong>Bag &amp; box.</strong> Seal all tubes in the biohazard bag and place it in the collection box.</li>
-          <li><strong>Ship.</strong> Put the box in the UPS return bag (prepaid label applied) and drop at UPS or hand it to your driver.</li>
-        </ol>
-      </article>
-    </div>
-        <p class="collect-note">Questions about collecting your sample? Call or text the GeneID Patient Support team at <strong>(973) 284-7560</strong> or email <strong>patient.support@geneidlab.com</strong>.</p>
-      </div>
-    </details>
   </div>
 </section>
 
@@ -526,49 +411,34 @@
 <section class="included">
   <div class="wrap">
     <div class="included-copy">
-      <p class="eyebrow">What's included</p>
-      <h2 style="font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:800;margin-bottom:24px;">Care, support, and no surprises</h2>
+      <p class="eyebrow">Qué incluye</p>
+      <h2 style="font-size:clamp(1.8rem,3.2vw,2.4rem);font-weight:800;margin-bottom:24px;">Atención, apoyo y sin sorpresas</h2>
       <ul class="check-list">
-        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> In-office saliva or cheek-swab collection — no blood required</li>
-        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Insurance benefits verified before any testing is done</li>
-        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Results reviewed with you by your own provider</li>
-        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Access to genetic counseling if your results call for it</li>
+        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Toma de muestra de saliva o hisopo bucal en el consultorio, sin necesidad de sangre</li>
+        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Verificación de los beneficios del seguro antes de realizar cualquier prueba</li>
+        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Resultados revisados contigo por tu propio proveedor</li>
+        <li><span class="ck" aria-hidden="true"><svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="m5 12 4.5 4.5L19 7" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Acceso a asesoría genética si tus resultados lo requieren</li>
       </ul>
     </div>
 
-    <!-- Cost panel — now a "Cash Pay Options" dropdown, placed under "Care, support, and no surprises". Self-pay pricing matches the GeneID bifold brochure. -->
-    <details class="info-drop cost-drop">
-      <summary class="info-summary">
-        <span>Cash Pay Options</span>
-        <svg class="drop-chev" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </summary>
-      <div class="info-drop-body">
-      <p>We keep billing transparent so you can decide with no pressure.</p>
+    <!-- NON-PROMISSORY cost panel — do not add "free" / "$0" / cash prices -->
+    <div class="included-panel">
+      <h3>Cómo funciona el costo</h3>
+      <p>Mantenemos la facturación transparente para que puedas decidir sin presión.</p>
       <div class="cost-line">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1C8B97" stroke-width="1.8"/><path d="M12 7v5l3 2" stroke="#1C8B97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>Your insurance benefits are verified <strong>before</strong> any testing.</span>
+        <span>Verificamos los beneficios de tu seguro <strong>antes</strong> de cualquier prueba.</span>
       </div>
       <div class="cost-line">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1C8B97" stroke-width="1.8"/><path d="m8.5 12 2.3 2.3L16 9.5" stroke="#1C8B97" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <span>You'll be told about any potential cost and <strong>approve it first</strong>.</span>
+        <span>Te informaremos de cualquier costo posible y <strong>tú lo apruebas primero</strong>.</span>
       </div>
       <div class="cost-line">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#1C8B97" stroke-width="1.8"/><path d="M9 12h6" stroke="#1C8B97" stroke-width="1.8" stroke-linecap="round"/></svg>
-        <span>You can <strong>decline at any time</strong>, at no charge.</span>
+        <span>Puedes <strong>rechazarla en cualquier momento</strong>, sin cargo alguno.</span>
       </div>
-      <div class="selfpay">
-        <h4>Self-pay pricing — if not covered</h4>
-        <div class="selfpay-grid">
-          <div><span>PrevenTest®</span><b>$999</b></div>
-          <div><span>Carrier</span><b>$249</b></div>
-          <div><span>PGx</span><b>$300</b></div>
-          <div><span>NIPT</span><b>$300</b></div>
-        </div>
-        <p class="selfpay-note">If testing isn't covered, affordable self-pay and interest-free payment plans are available — and you can decline at any time.</p>
-      </div>
-      <p style="font-size:.84rem;color:var(--slate);margin:14px 0 0;">If you receive an Explanation of Benefits (EOB) from your insurer, that document is not a bill.</p>
-      </div>
-    </details>
+      <p style="font-size:.84rem;color:var(--slate);margin:14px 0 0;">Si recibes una Explicación de Beneficios (EOB) de tu seguro, ese documento no es una factura.</p>
+    </div>
   </div>
 </section>
 
@@ -576,14 +446,14 @@
 <section class="privacy">
   <div class="wrap">
     <div>
-      <p class="eyebrow" style="color:#7FD8CB;">Your privacy</p>
-      <h2>Your genetic information is protected</h2>
-      <p>Your results belong to you and your care team. Genetic information is handled confidentially under HIPAA, and federal law adds specific protections for genetic test results.</p>
+      <p class="eyebrow" style="color:#7FD8CB;">Tu privacidad</p>
+      <h2>Tu información genética está protegida</h2>
+      <p>Tus resultados te pertenecen a ti y a tu equipo de atención. La información genética se maneja de forma confidencial conforme a la ley HIPAA, y la ley federal añade protecciones específicas para los resultados de pruebas genéticas.</p>
     </div>
     <div>
-      <p style="color:#fff;font-weight:600;margin-bottom:8px;">A note on the Genetic Information Nondiscrimination Act (GINA)</p>
-      <p>GINA generally prevents health insurers and employers from using your genetic information against you.</p>
-      <p class="fineprint">GINA's protections apply to health insurance and employment. They do <strong>not</strong> extend to life, disability, or long-term-care insurance. If you have questions about how testing could affect those, ask your provider or the GeneID Patient Support team.</p>
+      <p style="color:#fff;font-weight:600;margin-bottom:8px;">Una nota sobre la Ley de No Discriminación por Información Genética (GINA)</p>
+      <p>Por lo general, GINA impide que las aseguradoras de salud y los empleadores usen tu información genética en tu contra.</p>
+      <p class="fineprint">Las protecciones de GINA aplican al seguro de salud y al empleo. <strong>No se extienden</strong> a los seguros de vida, de incapacidad ni de cuidados a largo plazo. Si tienes preguntas sobre cómo la prueba podría afectarlos, consulta a tu proveedor o al equipo de Apoyo al Paciente de GeneID.</p>
     </div>
   </div>
 </section>
@@ -592,39 +462,39 @@
 <section class="faq" id="faq">
   <div class="wrap">
     <div class="section-head center">
-      <p class="eyebrow">Common questions</p>
-      <h2>Questions about genetic testing? You're not alone.</h2>
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>¿Tienes preguntas sobre las pruebas genéticas? No estás solo.</h2>
     </div>
     <div class="faq-list">
 
       <div class="faq-item" id="cancer">
-        <button class="faq-q" aria-expanded="false">Who should consider hereditary cancer risk testing (PrevenTest®)?</button>
-        <div class="faq-a"><div class="faq-a-inner"><p>It may be helpful if you have a personal or family history of cancer, relatives diagnosed young (45 or under), multiple relatives with related cancers, a known mutation in the family, or a rare or aggressive cancer in the family. Your eligibility screening will help confirm whether it's a fit for you.</p></div></div>
+        <button class="faq-q" aria-expanded="false">¿Quién debería considerar la prueba de riesgo hereditario de cáncer (PrevenTest®)?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Puede ser útil si tienes antecedentes personales o familiares de cáncer, familiares diagnosticados a una edad temprana (45 años o menos), varios familiares con cánceres relacionados, una mutación conocida en la familia, o un cáncer raro o agresivo en la familia. La evaluación de elegibilidad ayudará a confirmar si es adecuada para ti.</p></div></div>
       </div>
 
       <div class="faq-item" id="carrier">
-        <button class="faq-q" aria-expanded="false">What does carrier screening (NewbornGeneID®) tell me?</button>
-        <div class="faq-a"><div class="faq-a-inner"><p>It's a simple saliva test that screens for 68+ inherited conditions and shows whether you carry a genetic change that could be passed to a child. About 1 in 4 people carry a gene change without knowing it. ACOG and ACMG recommend carrier screening for individuals of reproductive age. It's helpful whether you're planning a pregnancy, already pregnant, or simply want to understand your own genetic health.</p></div></div>
+        <button class="faq-q" aria-expanded="false">¿Qué me indica la prueba de portador (NewbornGeneID®)?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Es una prueba sencilla de saliva que analiza más de 68 condiciones hereditarias e indica si eres portador de un cambio genético que podría transmitirse a un hijo. Aproximadamente 1 de cada 4 personas porta un cambio genético sin saberlo. El ACOG y el ACMG recomiendan la prueba de portador para personas en edad reproductiva. Es útil tanto si estás planeando un embarazo, ya estás embarazada, o simplemente quieres comprender tu propia salud genética.</p></div></div>
       </div>
 
       <div class="faq-item" id="pgx">
-        <button class="faq-q" aria-expanded="false">How does pharmacogenomic (PGx) testing help with my medications?</button>
-        <div class="faq-a"><div class="faq-a-inner"><p>PGx testing shows how your body is likely to process certain medications, so your provider can choose drugs and doses better matched to you — helping reduce trial-and-error and side effects. It supports care for many conditions, including depression, anxiety, heart disease, chronic pain, and ADHD.</p></div></div>
+        <button class="faq-q" aria-expanded="false">¿Cómo ayuda la prueba farmacogenómica (PGx) con mis medicamentos?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>La prueba PGx muestra cómo es probable que tu cuerpo procese ciertos medicamentos, para que tu proveedor pueda elegir fármacos y dosis más adecuados para ti, ayudando a reducir el ensayo y error y los efectos secundarios. Apoya la atención de muchas condiciones, como la depresión, la ansiedad, las enfermedades del corazón, el dolor crónico y el TDAH.</p></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">How is the sample collected?</button>
-        <div class="faq-a"><div class="faq-a-inner"><p>It's quick and non-invasive — a cheek swab or a saliva rinse, done right in your provider's office. There's no blood draw and no need to travel to a specialist.</p></div></div>
+        <button class="faq-q" aria-expanded="false">¿Cómo se toma la muestra?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Es rápido y no invasivo: un hisopo bucal o un enjuague de saliva, realizado en el consultorio de tu proveedor. No hay extracción de sangre ni necesidad de viajar a un especialista.</p></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Will I have to pay for testing?</button>
-        <div class="faq-a"><div class="faq-a-inner"><p>Your insurance benefits are verified before any testing happens, and you'll always be told about any potential cost and approve it before testing proceeds. You can decline at any time at no charge. If you have specific billing questions, the GeneID Patient Support team can walk you through your options.</p></div></div>
+        <button class="faq-q" aria-expanded="false">¿Tendré que pagar por la prueba?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>Verificamos los beneficios de tu seguro antes de realizar cualquier prueba, y siempre te informaremos de cualquier costo posible para que lo apruebes antes de continuar. Puedes rechazarla en cualquier momento sin cargo alguno. Si tienes preguntas específicas sobre la facturación, el equipo de Apoyo al Paciente de GeneID puede explicarte tus opciones.</p></div></div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-q" aria-expanded="false">Is testing required?</button>
-        <div class="faq-a"><div class="faq-a-inner"><p>No. Genetic testing through this program is completely voluntary. You can ask questions, take your time, and decline at any point.</p></div></div>
+        <button class="faq-q" aria-expanded="false">¿Es obligatoria la prueba?</button>
+        <div class="faq-a"><div class="faq-a-inner"><p>No. Las pruebas genéticas a través de este programa son completamente voluntarias. Puedes hacer preguntas, tomarte tu tiempo y rechazarlas en cualquier momento.</p></div></div>
       </div>
 
     </div>
@@ -634,12 +504,12 @@
 <!-- ============ CTA BAND ============ -->
 <section class="cta-band">
   <div class="wrap">
-    <p class="eyebrow" style="color:#BFEFE7;">Ready when you are</p>
-    <h2>See if you're eligible for genetic testing</h2>
-    <p>It's fast, easy, and completely confidential. Schedule a call with the GeneID Patient Support team to learn more.</p>
+    <p class="eyebrow" style="color:#BFEFE7;">Cuando estés listo</p>
+    <h2>Descubre si calificas para las pruebas genéticas</h2>
+    <p>Es rápido, fácil y completamente confidencial. Agenda una llamada con el equipo de Apoyo al Paciente de GeneID para obtener más información.</p>
     <div class="hero-cta">
-      <a class="btn btn-white" href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Schedule a call</a>
-      <a class="cta-phone" href="tel:+19732847560">or call (973) 284-7560</a>
+      <a class="btn btn-white" href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Agendar una llamada</a>
+      <a class="cta-phone" href="tel:+19732847560">o llama al (973) 284-7560</a>
     </div>
   </div>
 </section>
@@ -650,24 +520,24 @@
     <div class="foot-grid">
       <div style="max-width:300px;">
         <img src="data:image/png;base64,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" alt="GeneID Lab" style="height:46px;width:auto;display:block;" />
-        <p style="margin-top:14px;">Clinical-grade genetic testing, offered through your healthcare provider.</p>
-        <p><a href="es.html">Para Español, haga clic aquí →</a></p>
+        <p style="margin-top:14px;">Pruebas genéticas de grado clínico, ofrecidas a través de tu proveedor de salud.</p>
+        <p><a href="index.html">English / En inglés →</a></p>
       </div>
       <div class="foot-contact">
-        <strong style="color:#fff;display:block;margin-bottom:6px;">Patient Support</strong>
-        Call or text: <a href="tel:+19732847560">(973) 284-7560</a><br>
-        Email: <a href="mailto:patient.support@geneidlab.com">patient.support@geneidlab.com</a><br>
+        <strong style="color:#fff;display:block;margin-bottom:6px;">Apoyo al Paciente</strong>
+        Llama o envía un mensaje de texto: <a href="tel:+19732847560">(973) 284-7560</a><br>
+        Correo electrónico: <a href="mailto:patient.support@geneidlab.com">patient.support@geneidlab.com</a><br>
         GeneID Lab · 136 Summit Ave · Montvale, NJ 07645
       </div>
       <div class="foot-contact">
-        <strong style="color:#fff;display:block;margin-bottom:6px;">Explore</strong>
-        <a href="#tests">Tests offered</a><br>
-        <a href="#faq">Frequently asked questions</a><br>
-        <a href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Check eligibility</a>
+        <strong style="color:#fff;display:block;margin-bottom:6px;">Explorar</strong>
+        <a href="#tests">Pruebas disponibles</a><br>
+        <a href="#faq">Preguntas frecuentes</a><br>
+        <a href="https://calendly.com/patient-support-geneidlab/genetictestingeligibility" target="_blank" rel="noopener">Verificar elegibilidad</a>
       </div>
     </div>
     <p class="foot-legal">
-      This program is offered in partnership with GeneID Lab and supported by your care team. Genetic testing is voluntary. This page is for general information and is not medical advice; talk with your provider about whether testing is right for you. © <span id="yr"></span> GeneID Lab.
+      Este programa se ofrece en colaboración con GeneID Lab y cuenta con el apoyo de tu equipo de atención. Las pruebas genéticas son voluntarias. Esta página es solo para información general y no constituye consejo médico; consulta con tu proveedor si la prueba es adecuada para ti. © <span id="yr"></span> GeneID Lab.
     </p>
   </div>
 </footer>
